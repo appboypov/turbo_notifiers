@@ -4,7 +4,7 @@ import 'package:example/widgets/example_implementations/turbo_notifier_example.d
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:turbo_notifiers/turbo_notifiers.dart';
-import 'package:turbo_mvvm/data/models/base_view_model.dart';
+import 'package:turbo_mvvm/turbo_mvvm.dart';
 
 import 'data/constants/const_values.dart';
 
@@ -32,7 +32,7 @@ class HomeView extends StatelessWidget {
   static const String route = 'home-view';
 
   @override
-  Widget build(BuildContext context) => ViewModelBuilder<HomeViewModel>(
+  Widget build(BuildContext context) => TurboViewModelBuilder<HomeViewModel>(
         builder: (context, model) {
           return GestureDetector(
             onTap: model.focusNode.unfocus,
@@ -56,7 +56,7 @@ class HomeView extends StatelessWidget {
       );
 }
 
-class HomeViewModel extends BaseViewModel {
+class HomeViewModel extends TurboViewModel {
   final TurboNotifier<int> _counter = TurboNotifier(0);
   ValueListenable<int> get counterListenable => _counter;
 
