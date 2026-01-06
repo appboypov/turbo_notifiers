@@ -1,6 +1,7 @@
 name: turbo_notifiers
 description: A simple package that copies improves the behaviour of Flutter's ValueNotifier.
 version: 1.0.0
+resolution: workspace
 repository: https://github.com/appboypov/turbo_notifiers
 homepage: https://github.com/appboypov/turbo_notifiers
 issue_tracker: https://github.com/appboypov/turbo_notifiers/issues
@@ -11,7 +12,7 @@ topics:
   - flutter
 
 environment:
-  sdk: ">=2.16.2 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -21,7 +22,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   gherkin_unit_test: ^0.0.5
   mockito: ^5.4.6
 
